@@ -10,9 +10,13 @@ const config: Config = {
     extend: {
       fontFamily: {
         "plus-jakarta-sans": ["Plus Jakarta Sans", "sans-serif"],
+        "lexend-deca": ["Lexend Deca", "sans-serif"],
       },
       colors: {
         primary: "#6246EA",
+        "gray-1": "#333",
+        "gray-2": "#545454",
+        "gray-3": "828282",
       },
     },
   },
