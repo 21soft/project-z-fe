@@ -13,7 +13,10 @@ describe("login", () => {
       name: "Community",
     });
 
+    const logoIcon = screen.getByRole("logo-icon");
+
     expect(communityText).toBeInTheDocument();
+    expect(logoIcon).toBeInTheDocument();
   });
 
   it("should render form title and information with button redirect to register page on login page correctly", () => {
@@ -49,9 +52,11 @@ describe("login", () => {
       selector: "input",
     });
     const inputField = screen.getByPlaceholderText("Masukkan password anda");
+    const eyeOffIcon = screen.getByRole("eye-off-icon");
 
     expect(labelText).toBeInTheDocument();
     expect(inputField).toBeInTheDocument();
+    expect(eyeOffIcon).toBeInTheDocument();
   });
 
   it("should render button redirect to forget password page correctly", () => {
@@ -76,6 +81,9 @@ describe("login", () => {
       name: "Login-google-button",
     });
 
+    const googleIcon = screen.getByRole("google-icon");
+
     expect(loginGoogleButton).toBeInTheDocument();
+    expect(googleIcon).toBeInTheDocument();
   });
 });
