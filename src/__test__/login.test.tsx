@@ -87,13 +87,9 @@ describe("login", () => {
     expect(googleIcon).toBeInTheDocument();
   });
 
-  it("should have image banner", () => {
-    const imageBanner = screen.getByRole("img", { name: "login-banner" });
-    expect(imageBanner).toBeInTheDocument();
-  });
+  it("should render auth layout on login page correctly", () => {
+    const authLayout = screen.getByRole("auth-layout");
 
-  it("should have ornament on banner", () => {
-    const ornamentIcon = screen.getByRole("ornament-icon");
-    expect(ornamentIcon).toBeInTheDocument();
+    expect(authLayout).toBeInTheDocument();
   });
 });
