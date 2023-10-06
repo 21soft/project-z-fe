@@ -1,13 +1,13 @@
 import { screen, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Login from "@/app/(auth)/login/page";
+import Register from "@/app/(auth)/register/page";
 
-describe("login", () => {
+describe("register", () => {
   beforeEach(() => {
-    render(<Login />);
+    render(<Register />);
   });
 
-  it("should render logo and name of app on login page correctly", () => {
+  it("should render logo and name of app on register page correctly", () => {
     const communityText = screen.getByRole("heading", {
       level: 1,
       name: "Community",
@@ -19,25 +19,25 @@ describe("login", () => {
     expect(logoIcon).toBeInTheDocument();
   });
 
-  it("should render form title and information with button redirect to register page on login page correctly", () => {
+  it("should render form title and information with button redirect to register page on register page correctly", () => {
     const titleText = screen.getByRole("heading", {
       level: 2,
-      name: "Log In",
+      name: "Register",
     });
 
-    const informationText = screen.getByText(/Belum punya akun?/i);
+    const informationText = screen.getByText(/Sudah punya akun?/i);
 
     const buttonRedirect = screen.getByRole("link", {
-      name: "Daftar disini",
+      name: "Login disini",
     });
 
     expect(titleText).toBeInTheDocument();
     expect(informationText).toBeInTheDocument();
     expect(buttonRedirect).toBeInTheDocument();
-    expect(buttonRedirect).toHaveAttribute("href", "/register");
+    expect(buttonRedirect).toHaveAttribute("href", "/login");
   });
 
-  it("should render email field group on login page correctly", () => {
+  it("should render email field group on register page correctly", () => {
     const labelText = screen.getByLabelText("Email", {
       selector: "input",
     });
@@ -47,28 +47,33 @@ describe("login", () => {
     expect(inputField).toBeInTheDocument();
   });
 
-  it("should render password field group on login page correctly", () => {
+  it("should render password field group on register page correctly", () => {
     const labelText = screen.getByLabelText("Password", {
       selector: "input",
     });
     const inputField = screen.getByPlaceholderText("Masukkan password anda");
-    const eyeOffIcon = screen.getByRole("eye-off-icon");
+    const eyeOffIcon = screen.getAllByRole("eye-off-icon");
 
     expect(labelText).toBeInTheDocument();
     expect(inputField).toBeInTheDocument();
-    expect(eyeOffIcon).toBeInTheDocument();
+    expect(eyeOffIcon[0]).toBeInTheDocument();
   });
 
-  it("should render button redirect to forget password page correctly", () => {
-    const lupaPasswowdButton = screen.getByRole("link", {
-      name: "Lupa Password?",
+  it("should render re-type password field group on register page correctly", () => {
+    const labelText = screen.getByLabelText("Re-type Password", {
+      selector: "input",
     });
+    const inputField = screen.getByPlaceholderText(
+      "Masukkan ulang password anda"
+    );
+    const eyeOffIcon = screen.getAllByRole("eye-off-icon");
 
-    expect(lupaPasswowdButton).toBeInTheDocument();
-    expect(lupaPasswowdButton).toHaveAttribute("href", "/forgot-password");
+    expect(labelText).toBeInTheDocument();
+    expect(inputField).toBeInTheDocument();
+    expect(eyeOffIcon[1]).toBeInTheDocument();
   });
 
-  it("should render button submit on login page correctly", () => {
+  it("should render button submit on register page correctly", () => {
     const submitButton = screen.getByRole("button", {
       name: "Submit-button",
     });
@@ -76,7 +81,7 @@ describe("login", () => {
     expect(submitButton).toBeInTheDocument();
   });
 
-  it("should render button login using google on login page correctly", () => {
+  it("should render button login using google on register page correctly", () => {
     const loginGoogleButton = screen.getByRole("button", {
       name: "Login-google-button",
     });
@@ -87,7 +92,7 @@ describe("login", () => {
     expect(googleIcon).toBeInTheDocument();
   });
 
-  it("should render auth layout on login page correctly", () => {
+  it("should render auth layout on register page correctly", () => {
     const authLayout = screen.getByRole("auth-layout");
 
     expect(authLayout).toBeInTheDocument();
