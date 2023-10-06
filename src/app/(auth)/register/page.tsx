@@ -9,7 +9,7 @@ export default function Register() {
       <h1 className="text-primary flex flex-row justify-center items-center gap-2 mt-5 font-bold font-lexend-deca text-xl">
         <LogoIcon height={34} width={33} /> Community
       </h1>
-      <form className="mt-16 flex flex-col gap-6">
+      <form className="mt-10 flex flex-col gap-6">
         <div aria-label="Form-title" className="flex flex-col gap-2">
           <h2 className="text-primary font-bold text-xl">Register</h2>
           <p aria-description="Form-information">
