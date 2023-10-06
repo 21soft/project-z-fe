@@ -8,3 +8,9 @@
     @apply font-plus-jakarta-sans text-gray-1;
   }
 }
+
+@layer utilities {
+  .bg-gradient-primary {
+    background: linear-gradient(206deg, #b8a4e2 0%, #6246ea 100%);
+  }
+}
