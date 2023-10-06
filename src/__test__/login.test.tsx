@@ -86,4 +86,14 @@ describe("login", () => {
     expect(loginGoogleButton).toBeInTheDocument();
     expect(googleIcon).toBeInTheDocument();
   });
+
+  it("should have image banner", () => {
+    const imageBanner = screen.getByRole("img", { name: "login-banner" });
+    expect(imageBanner).toBeInTheDocument();
+  });
+
+  it("should have ornament on banner", () => {
+    const ornamentIcon = screen.getByRole("ornament-icon");
+    expect(ornamentIcon).toBeInTheDocument();
+  });
 });
