@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Z
+
+Project Z Website (Website for community builder)
+
+> 🚧 This web app is still in early and active development
+
+Check out:
+
+- Web: <https://project-z-fe.fikrialwan.com/>
+- Repo: <https://github.com/bandungdevcom/bandungdev.com>
+
+## Concept
+
+- [ ] Create your own community
+- [ ] Discover nertwork and community
+- [ ] Explore various events
+
+## UI Design
+
+Figma link:
+<https://www.figma.com/file/pU2eRzTMRi8OVRB9qJTjTj/Comunity-Engagement>
 
 ## Getting Started
 
-First, run the development server:
+Read about [Next.js](https://nextjs.org/) and the [Next.js Docs](https://nextjs.org/docs) to understand about Next.js.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Primary Tech Stack
+
+1. [TypeScript](https://typescriptlang.org): Typed language
+   - Related to JavaScript, HTML, CSS
+2. [React](https://react.dev): UI library
+3. [Next.js](https://remix.run): React.js framework for Frontend or Full Stack Web Development
+4. [Tailwind CSS](https://tailwindcss.com): Styling
+5. [Netlify](https://www.netlify.com/): Web app deployment
+6. [Jest](https://jestjs.io): Testing
+
+Use later:
+
+- [Playwright](https://playwright.dev)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [NextAuth.js](https://next-auth.js.org/)
+
+## Development
+
+### Dependencies
+
+Use [pnpm](https://pnpm.io) to improve productivity and replace npm, so make
+sure [pnpm is installed](https://pnpm.io/installation#using-npm):
+
+```sh
+npm i -g pnpm
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To run the app locally, make sure the project's local dependencies are
+installed:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Build
 
-## Learn More
+Check if the build is fine. This als be used to build the app for production.
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+pnpm build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Then try run the app in production mode:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```sh
+pnpm start
+```
 
-## Deploy on Vercel
+> This repo has been officially deployed to Netlify and hosted at
+> <https://project-z-fe.fikrialwan.com/>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Develop Locally
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If everything works fine, start the Remix development server like so:
+
+```sh
+pnpm dev
+```
+
+This starts the app in development mode, rebuilding assets on file changes.
+
+Open up [http://localhost:3000](http://localhost:3000) and it should be ready to
+go!
